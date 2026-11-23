@@ -119,6 +119,9 @@ blockquote {
 .to-line span { width: 10cqw; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-soft)); }
 .to-line span:last-child { background: linear-gradient(270deg, transparent, var(--gold-soft)); }
 /* 開聲音提示：只有有音樂的版本才出現 */
+.sound-tip { display: none; margin-top: 2.2cqw; font-size: 2.9cqw; /* 約原本的 85% */ letter-spacing: .12em; color: var(--gold-soft); opacity: .75; }
+body.has-music .sound-tip { display: block; } /* 只有有音樂的版本才顯示 */
+body.mini .sound-tip { visibility: hidden; }
 .cupcake { width: 15cqw; height: auto; margin-bottom: 3cqw; filter: drop-shadow(0 2px 8px rgba(255,207,110,.25)); }
 .backcover p { font-size: 4.2cqw; line-height: 1.9; opacity: .92; }
 .backcover p + p { margin-top: 3cqw; } /* 兩段之間空一行 */
@@ -268,6 +271,7 @@ button:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px;
           <p>相信妳已經看完卡片了吧！<br>還有最後一份小禮物想要送給妳～</p>
           <p>接下來的三分鐘<br>準備好欣賞一場<br>專屬於妳的生日煙火了嗎？</p>
           <button class="ignite" id="ignite" type="button">準備好了 ✦</button>
+          <div class="sound-tip">可以開啟聲音喔！</div>
         </div>
       </div>
     </div>
